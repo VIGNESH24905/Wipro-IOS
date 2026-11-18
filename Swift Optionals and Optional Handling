@@ -1,0 +1,26 @@
+var name: String?="Ravi"
+var age: Int?=nil
+print(name)                                             // Optional("Ravi")
+print(age)                                              // nil
+
+// Force Unwrapping (!)
+print(name!)                                            // Ravi
+
+// Optional Binding (if let)
+var names: String?="vignesh"
+if let actualName = names {
+    print(actualName)                                   // vignesh
+} else {
+    print("Name is not available")
+}
+// else Statement
+var namee: String?=nil
+if let actualName = namee {
+    print(actualName)
+} else {
+    print("Name is not available")                      // Name is not available
+}
+
+// Optional Chaining (?)
+print(names?.count)                                    // Optional(7)
+
