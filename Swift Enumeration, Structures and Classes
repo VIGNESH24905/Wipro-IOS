@@ -1,0 +1,38 @@
+// Enumeration
+enum Day {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+}
+var today = Day.monday
+print(today)                    // monday
+
+// Structures
+
+struct Student {
+    var name: String
+    var age: Int
+}
+
+var student1 = Student(name: "Ravi", age: 20)
+
+print(student1.name)            // Ravi
+print(student1.age)             //20
+
+// Classes
+
+class Car {
+    var brand = "BMW"
+    var color = "Black"
+    func display() {
+        print(brand)
+        print(color)
+    }
+}
+let car1 = Car()
+car1.display()                  //BMW
+                                //Black
+
+
