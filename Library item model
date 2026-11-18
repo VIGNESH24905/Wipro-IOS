@@ -1,0 +1,44 @@
+enum BookStatus {
+    case available
+    case borrowed(by: String, dueIns: Int)
+    case reserved(for: String)
+    var label: String {
+        switch self {
+        case .available:
+            return "Available"
+        case .borrowed(let name, let days):
+            return "Borrowed by \(name), Due in \(days) days"
+        case .reserved(let name):
+            return "Reserved for \(name)"
+        }
+    }
+}
+
+struct Book {
+    var title: String
+    var status: BookStatus = .available
+}
+class Member {
+    var name: String
+    var borrowedBooks: [String]
+    init(name: String, borrowedBooks: [String]) {
+        self.name = name
+        self.borrowedBooks = borrowedBooks
+    }
+}
+
+var book1 = Book(title: "Swift Programming")
+var book2 = book1
+book2.status = .borrowed(by: "Ravi", dueIns: 5)
+print("Book 1:", book1.title, "-", book1.status.label)                //  Book 1: Swift Programming - Available
+print("Book 2:", book2.title, "-", book2.status.label)                //  Book 2: Swift Programming - Borrowed by Ravi, Due in 5 days
+
+
+let member1 = Member(name: "ravi", borrowedBooks: ["Swift Basics"])
+let member2 = member1
+member2.name = "Arun"
+print("Member 1:", member1.name)                                      // Member 1: Arun
+print("Member 2:", member2.name)                                      // Member 2: Arun
+
+
+
