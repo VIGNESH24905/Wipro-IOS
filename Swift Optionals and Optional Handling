@@ -24,3 +24,6 @@ if let actualName = namee {
 // Optional Chaining (?)
 print(names?.count)                                    // Optional(7)
 
+// Nil Coalescing Operator (??)
+let result = namee ?? "Guest"
+print(result)                                          // Guest
