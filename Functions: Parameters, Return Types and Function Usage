@@ -1,0 +1,64 @@
+// Function
+func greet() {
+    print("Hello")                  // Hello
+}
+greet()
+
+// Function Parameters
+func greet(name: String) {
+    print("Hello \(name)")          // Hello Vignesh
+}
+greet(name: "Vignesh")
+
+// Multiple Parameters
+func add(a: Int, b: Int) {
+    print(a + b)                    // 30
+}
+add(a: 10, b: 20)
+
+// // Function Return Types
+func adds(a: Int, b: Int) -> Int {
+    return a + b
+}
+let result = adds(a: 20, b: 20)
+print(result)                       // 40
+
+// String return type
+func getName() -> String {
+    return "Vignesh"
+}
+print(getName())                    // Vignesh
+
+// Double return type
+func getPrice() -> Double {
+    return 99.50
+}
+print(getPrice())                   // 99.5
+
+// Bool return type
+func isEligible(age: Int) -> Bool {
+    return age >= 18
+}
+print(isEligible(age: 20))          // true
+
+// Function With Parameters but Without Return Type
+func student(name: String, age: Int) {
+    print("Name: \(name)")
+    print("Age: \(age)")
+}                                               // Name: Vignesh
+student(name: "Vignesh", age: 20)               // Age: 20
+
+// Function Without Parameters but With Return Type
+func getNumber() -> Int {
+    return 100
+}
+let number = getNumber()
+print(number)                                   // 100
+
+// Function With Parameters and Return Type
+func multiply(a: Int, b: Int) -> Int {
+    return a * b
+}
+let results = multiply(a: 5, b: 4)
+print(results)                                  // 20
+
