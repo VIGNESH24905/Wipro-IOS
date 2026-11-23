@@ -1,0 +1,32 @@
+// Closure with Parameters
+let add = { (a: Int, b: Int) -> Int in
+    return a + b
+}
+print(add(10, 20))                          // 30
+
+// Closure with a String Parameter 
+let greet = { (name: String) -> String in
+    return "Hello, \(name)"
+}
+print(greet("Vignesh"))                     // Hello, Vignesh
+
+// map() – Transform Each Element
+let numbers = [1, 2, 3, 4, 5]
+let result = numbers.map { number in
+    number * 2
+}
+print(result)                              // [2, 4, 6, 8, 10]
+
+// filter() – Select Specific Elements
+let numbers = [1, 2, 3, 4, 5, 6]
+let result = numbers.filter { number in
+    number % 2 == 0
+}
+print(result)                              // [2, 4, 6]
+
+// reduce() – Combine All Elements
+let numbers = [1, 2, 3, 4, 5]
+let result = numbers.reduce(0) { total, number in
+    total + number
+}
+print(result)                              // 15
